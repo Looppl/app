@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 import json
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static/')
+app.static_folder = 'static'
 app.config['SECRET_KEY'] = 'secret_key'
 
 RESULTS_DIR = './results'
